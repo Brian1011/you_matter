@@ -10,8 +10,8 @@ export default function SingleCard() {
           <div className="self-center">Image</div>
         </div>*/}
 
-        <div className="h-auto border-2 border-gray-400 rounded-md flex justify-center items-center text-white w-2/6">
-          <div className="self-center text-black">Image</div>
+        <div className="h-auto border-2 rounded-md flex justify-center items-center w-2/6 bg-black">
+          <div className="self-center text-white">Image</div>
         </div>
 
         <div className="w-4/6 px-2 justify-center">
