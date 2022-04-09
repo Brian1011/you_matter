@@ -1,6 +1,6 @@
 function BannerComponent() {
   return (
-    <div className="w-full h-auto p-2 flex flex-col md:flex-row-reverse">
+    <div className="w-full h-auto p-4 flex flex-col md:flex-row-reverse">
       <div className="w-full md:w-1/2 flex items-center">
         <img
           className="xs:h-auto xs:w-3/4 md:h-auto md:w-full rounded-md "
