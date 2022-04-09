@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import BannerComponent from "../components/banner";
 import NavbarComponent from "../components/navbar";
 import Stories from "../components/stories";
 
@@ -14,6 +15,7 @@ export default function Home() {
 
       <div className="w-full px-12 bg-black">
         <NavbarComponent />
+        <BannerComponent />
         <Stories />
       </div>
     </div>

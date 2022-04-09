@@ -10,13 +10,13 @@ function NavbarComponent() {
           <div>About</div>
           <div>Skill Share</div>
           <div>
-            <div className="py-3 px-2 rounded-md bg-blue-600 hover:border-blue-500 text-white">
-              <div className="px-2">Sign In</div>
+            <div className="py-2 px-2 rounded-md bg-blue-600 hover:border-blue-500 text-white">
+              <div className="px-3">Register</div>
             </div>
           </div>
           <div>
-            <div className="py-3 px-2 rounded-md bg-blue-600 hover:border-blue-500 text-white">
-              <div className="px-2">Donate</div>
+            <div className="py-2 px-2 rounded-md bg-blue-600 hover:border-blue-500 text-white">
+              <div className="px-3">Donate</div>
             </div>
           </div>
         </div>
