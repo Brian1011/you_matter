@@ -9,34 +9,10 @@ function DonateForm() {
 
   const ABI = [
     {
-      inputs: [
-        {
-          internalType: "string",
-          name: "_greeting",
-          type: "string",
-        },
-      ],
-      stateMutability: "nonpayable",
-      type: "constructor",
-    },
-    {
       inputs: [],
       name: "donate",
       outputs: [],
       stateMutability: "payable",
-      type: "function",
-    },
-    {
-      inputs: [],
-      name: "greet",
-      outputs: [
-        {
-          internalType: "string",
-          name: "",
-          type: "string",
-        },
-      ],
-      stateMutability: "view",
       type: "function",
     },
     {
@@ -52,13 +28,36 @@ function DonateForm() {
       stateMutability: "nonpayable",
       type: "function",
     },
+    {
+      inputs: [
+        {
+          internalType: "string",
+          name: "_greeting",
+          type: "string",
+        },
+      ],
+      stateMutability: "nonpayable",
+      type: "constructor",
+    },
+    {
+      inputs: [],
+      name: "greet",
+      outputs: [
+        {
+          internalType: "string",
+          name: "",
+          type: "string",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
   ];
-
   useEffect(() => {
     // provider to connect to wallet
     const provider = new ethers.providers.Web3Provider(global.window.ethereum);
     const signer = provider.getSigner();
-    const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const contractAddress = "0x27b3e1fc4e42ec666c8a36bC258138CD6c59fDC1";
     const contract = new ethers.Contract(contractAddress, ABI, signer);
 
     const connectWallet = async () => {
@@ -89,7 +88,7 @@ function DonateForm() {
     // providers
     const provider = new ethers.providers.Web3Provider(global.window.ethereum);
     const signer = provider.getSigner();
-    const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const contractAddress = "0x27b3e1fc4e42ec666c8a36bC258138CD6c59fDC1";
     const contract = new ethers.Contract(contractAddress, ABI, signer);
 
     // eth value
@@ -105,9 +104,9 @@ function DonateForm() {
 
   return (
     <div className="w-full flex flex-col justify-center mt-4 p-4 text-white bg-black h-screen">
-      <div className="flex flex-col space-y-2 justify-center">
-        <div className="self-center text-4xl">
-          Total Donated Value: {balance} ETH
+      <div className="flex flex-col space-y-2 self-center w-1/2">
+        <div className="self-center text-4xl mb-8">
+          Total Donated Value: {balance} ONE
         </div>
         <div className="self-center border-2 rounded-md border-white p-4">
           <form
