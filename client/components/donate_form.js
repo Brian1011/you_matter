@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import dynamic from "next/dynamic";
+import BannerComponent from "../components/banner";
 
 function DonateForm() {
   const [donateValue, setDonateValue] = useState(0);
@@ -103,28 +104,32 @@ function DonateForm() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center mt-4 p-4 text-white bg-black">
-      <h1 className="text-3xl font-bold underline">{}</h1>
-      <div className="flex flex-row justify-between w-3/4 space-x-2">
-        <div>Contract Balance: {balance}</div>
-        <div>
-          <div>
-            <form onSubmit={handleDepositSubmit}>
-              <input
-                type="number"
-                className="py-2 px-2 border border-gray-500 rounded-md text-black"
-                onChange={handleDepositChange}
-                value={donateValue}
-              />
+    <div className="w-full flex flex-col justify-center mt-4 p-4 text-white bg-black h-screen">
+      <div className="flex flex-col space-y-2 justify-center">
+        <div className="self-center text-4xl">
+          Total Donated Value: {balance} ETH
+        </div>
+        <div className="self-center border-2 rounded-md border-white p-4">
+          <form
+            onSubmit={handleDepositSubmit}
+            className="flex flex-col justify-center space-y-4"
+          >
+            <div className="self-center">Enter Amount to Donate</div>
+            <input
+              placeholder="Amount"
+              type="number"
+              className="py-2 px-2 border border-gray-500 rounded-md text-black"
+              onChange={handleDepositChange}
+              value={donateValue}
+            />
 
-              <button
-                className="bg-blue-600 mt-2 text-white rounded-md flex justify-center"
-                type="submit"
-              >
-                <div className="py-2 px-2">Donate</div>
-              </button>
-            </form>
-          </div>
+            <button
+              className="bg-blue-600 text-white rounded-md flex self-center"
+              type="submit"
+            >
+              <div className="py-3 px-6 text-xl">Donate</div>
+            </button>
+          </form>
         </div>
       </div>
     </div>

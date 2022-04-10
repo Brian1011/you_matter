@@ -1,4 +1,7 @@
+import { useRouter } from "next/router";
+
 function BannerComponent() {
+  const router = useRouter();
   return (
     <div className="w-full h-auto p-4 flex flex-col md:flex-row-reverse">
       <div className="w-full md:w-1/2 flex items-center">
@@ -13,9 +16,12 @@ function BannerComponent() {
           <div className="text-7xl bg-clip-text text-white mb-10">
             You Matter
           </div>
-          <div className="rounded-md h-14 bg-blue-500 flex justify-center items-center">
+          <button
+            className="rounded-md h-14 bg-blue-500 flex justify-center items-center w-full"
+            onClick={() => router.push("/donate")}
+          >
             <div className="flex justify-center text-xl text-white">Donate</div>
-          </div>
+          </button>
         </div>
       </div>
     </div>
